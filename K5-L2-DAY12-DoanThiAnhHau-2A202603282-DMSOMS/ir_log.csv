@@ -1,0 +1,7 @@
+﻿frame_id,source,phenomenon,affected_field,effect_on_label
+S01_rgb,RGB_reference,"Ảnh RGB rất tối; người và ghế em bé khó tách khỏi nền ghế.",person/infant_seat,"Không suy người vắng mặt từ ảnh RGB; đối chiếu hình dạng ở IR-sim cùng cảnh và chỉ gán phần nhìn thấy rõ."
+S01_ir,IR_sim,"IR-sim làm rõ hình người và ghế em bé ở giữa ảnh dù RGB cùng cảnh tối.",person.seat/infant_seat.seat,"Có thể nhận ra người và ghế theo hình dạng/vị trí; ghế ở giữa xe là rear_middle. IR-sim không cho biết màu."
+S04_ir,IR_sim,"Ghế em bé ở bên phải ảnh hiện rõ hình dáng nhưng màu đỏ của ghế trong RGB không còn.",infant_seat.seat/facing,"Dựa vào hình dáng và vị trí để gán ghế; không gán thuộc tính màu từ ảnh IR."
+S07_ir,IR_sim,"Hộp vuông và ghế em bé vẫn phân biệt được theo đường viền, trong khi màu hộp và họa tiết bị mất.",object.type/infant_seat,"Có thể phân loại hộp theo hình dạng và nhận ra ghế; không dùng màu để suy loại hoặc thuộc tính."
+D01,real_IR,"Vùng mặt sáng mạnh do chiếu NIR, một số chi tiết mắt khó đọc ổn định.",face.eye_left/face.eye_right,"Chỉ ghi open hoặc closed khi thấy rõ khe mắt/mí; mắt bị phản xạ hoặc không phân biệt được ghi unknown."
+D03,real_IR,"NIR đơn sắc giữ được hình người, tay và vật cầm nhưng không giữ màu sắc của vật/áo.",hand/phone,"Gán tay theo hình và vị trí; chỉ gán phone nếu thấy rõ đặc trưng điện thoại, không suy từ màu hay vật cầm không rõ."

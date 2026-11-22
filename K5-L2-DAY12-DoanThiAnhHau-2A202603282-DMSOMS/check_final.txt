@@ -1,0 +1,18 @@
+File: export_final.zip
+Ảnh: 22 · đã có frame_meta: 22 · số đối tượng: child_seat=13, face=10, face13=6, hand=12, infant_seat=9, object=4, person=10, phone=1
+  [ERROR] S01_ir.png: child_seat: occupied='yes' không hợp lệ (cho phép: unknown, no)
+  [ERROR] S01_rgb.png: child_seat: occupied='yes' không hợp lệ (cho phép: unknown, no)
+  [ERROR] S06_rgb.png: child_seat: occupied='yes' không hợp lệ (cho phép: unknown, no)
+  [ERROR] S08_ir.png: child_seat: occupied='yes' không hợp lệ (cho phép: unknown, no)
+  [ERROR] S08_rgb.png: child_seat: occupied='yes' không hợp lệ (cho phép: unknown, no)
+Kết quả: 5 lỗi, 0 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
+
+---
+Giai thich cac dong ERROR o tren
+
+Cac dong `occupied='yes' khong hop le` phan anh do lech giua schema nhan va bo kiem tra, khong tu dong chung minh box/nhan sai theo noi dung anh:
+- `labels_cabin_v1.json` o thu muc goc (ban cap nhat 22/11) cho phep `child_seat.occupied` co cac gia tri `unknown`, `no`, `yes`.
+- `scripts/cabin_schema.py` dong 48 van chi chap nhan `unknown`, `no`; file schema trong `G07/` cung chi liet ke hai gia tri nay.
+- Vi vay cabin_check danh dau `yes` la ERROR theo schema validator dang chay. Nhom giu `yes` o cac anh da nhan dinh co nguoi/vat trong ghe de phan anh dieu quan sat va de bao gap nay cho coach, khong sua script de bo qua loi.
+
+Luu y: day la ghi chu ve gap giua cac phien ban schema/validator, khong thay the quyet dinh theo guideline hoac coach. Neu khong quan sat ro ben trong ghe, ghi `unknown`; ca coach da chot trong TEAM.md la ghe bi tui che gan het thi `occupied = unknown`, kem box `child_seat` va box `object` rieng.
